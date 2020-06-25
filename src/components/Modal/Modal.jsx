@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Modal extends Component {
+  static propTypes = {
+    closeModal: PropTypes.func.isRequired,
+  };
+
   closeModalWithClick = e => {
     if (e.target === e.currentTarget) {
       this.props.closeModal();
